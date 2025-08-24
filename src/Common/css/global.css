@@ -5,7 +5,7 @@
     --secondary-color: #04fd6c;
     --accent-color: #e74c3c;
     --background-color: #f4f4f4;
-    --text-color: #161616;
+    --text-color: rgb(80, 79, 79);
     --text-color-white: #ffffff;
   
     /* Font Sizes */
@@ -16,7 +16,7 @@
   }
   
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Popins', sans-serif !important;
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;

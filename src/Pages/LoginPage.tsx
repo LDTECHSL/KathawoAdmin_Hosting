@@ -1,9 +1,7 @@
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, Typography } from "@mui/material";
 import "../Common/css/styles.css";
-import Footer from "../Components/Footer";
 import AuthLogin from "../Layouts/AuthLogin";
 import Card from "../Components/Card";
-import text from "../Assets/Text/Text.json";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 import Spinner from "src/Components/Spinner";
@@ -36,14 +34,15 @@ const LoginPage = () => {
       <Card>
         <div className="login-main-outer">
           <Spinner isLoading={loading} />
-          <div className="login-head-outer">
-            <span className="content-header-text">{text.loginPage.header}</span>
+          <div className="login-head-outer1">
+            <span className="content-header-text">Kathawo Admin Panel</span>
           </div>
           <div className="login-head-outer">
+            <Typography variant="body2" color="textSecondary" align="left" sx={{ mb: 1, color: 'grey' }}>Username</Typography>
             <TextField
               id="outlined-basic"
               size="small"
-              label="Username"
+              placeholder="Username"
               variant="outlined"
               fullWidth
               value={username}
@@ -71,10 +70,11 @@ const LoginPage = () => {
           </div>
 
           <div className="login-head-outer">
+            <Typography variant="body2" color="textSecondary" align="left" sx={{ mb: 1, color: 'grey' }}>Password</Typography>
             <TextField
               id="outlined-basic"
               size="small"
-              label="Password"
+              placeholder="Password"
               variant="outlined"
               fullWidth
               type="password"
@@ -102,16 +102,8 @@ const LoginPage = () => {
             />
           </div>
           <div className="login-head-outer">
-            <div className="login-inner">
-              <span className="textBtn">{text.loginPage.noAccountText}</span>
-            </div>
-            <div className="login-inner inner1">
-              <span className="textBtn">{text.loginPage.forgetPasswordText}</span>
-            </div>
-          </div>
-          <div className="login-head-outer">
             <Button className="login-btn" variant="contained" onClick={handleLogin}>
-              {text.loginPage.loginButton}
+              Login
             </Button>
           </div>
         </div>
