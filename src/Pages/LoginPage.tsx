@@ -11,8 +11,8 @@ import { showError } from "src/Components/Toast";
 const LoginPage = () => {
   const navigate = useNavigate();
 
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('admin');
+  const [password, setPassword] = useState('password');
   const [loading, setLoading] = useState(false);
 
   const handleLogin = () => {
