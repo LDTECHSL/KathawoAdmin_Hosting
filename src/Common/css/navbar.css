@@ -17,8 +17,9 @@
 }
 
 .drawer-logo-txt{
-    font-size: 23px;
-    font-weight: bold
+    font-size: var(--font-large) !important;
+    font-weight: bold !important;
+    color: var(--text-color-white);
 }
 
 .drawer-header{
@@ -26,7 +27,8 @@
     height: 65px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+    gap: 15px;
     padding-top: 8px;
 }
 
