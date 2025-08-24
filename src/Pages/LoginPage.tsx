@@ -7,6 +7,7 @@ import { useState } from "react";
 import Spinner from "src/Components/Spinner";
 import CommonInput from "src/Components/CommonInput";
 import { showError } from "src/Components/Toast";
+import env from "src/env";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -29,38 +30,43 @@ const LoginPage = () => {
 
   return (
     <AuthLogin>
-      <Card>
-        <div className="login-main-outer">
-          <Spinner isLoading={loading} />
-          <div className="login-head-outer1">
-            <span className="content-header-text">Kathawo Admin Panel</span>
-          </div>
-          <div className="login-head-outer">
-            <CommonInput
-              label="Username"
-              placeholder="Enter username"
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
+      <>
+        <Card>
+          <div className="login-main-outer">
+            <Spinner isLoading={loading} />
+            <div className="login-head-outer1">
+              <span className="content-header-text">Kathawo Admin Panel</span>
+            </div>
+            <div className="login-head-outer">
+              <CommonInput
+                label="Username"
+                placeholder="Enter username"
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </div>
 
-          <div className="login-head-outer">
-            <CommonInput
-              label="Password"
-              placeholder="Enter password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <div className="login-head-outer">
+              <CommonInput
+                label="Password"
+                placeholder="Enter password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div className="login-head-outer">
+              <Button className="login-btn" variant="contained" onClick={handleLogin}>
+                Login
+              </Button>
+            </div>
           </div>
-          <div className="login-head-outer">
-            <Button className="login-btn" variant="contained" onClick={handleLogin}>
-              Login
-            </Button>
-          </div>
+        </Card>
+        <div className="version-outer">
+          <span>{env.COMPANY}</span>
         </div>
-      </Card>
+      </>
     </AuthLogin>
   );
 };

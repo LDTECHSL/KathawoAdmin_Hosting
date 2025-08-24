@@ -7,6 +7,16 @@
     margin: 0;
 }
 
+.version-outer{
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color-dark);
+    color: var(--text-color-white);
+    font-size: var(--font-xsmall) !important;
+}
+
 .content-header-text{
     font-size: var(--font-large);
     font-weight: 550;
@@ -44,6 +54,7 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+    background-color: var(--background-color);
     /* background: url("../../Assets/Images/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat; */

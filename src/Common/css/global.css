@@ -1,7 +1,7 @@
 :root {
     /* Colors */
     --primary-color: #e67e22;
-    --primary-color-dark: #5F616E;
+    --primary-color-dark: #242424;
     --secondary-color: #04fd6c;
     --accent-color: #e74c3c;
     --background-color: #f4f4f4;
@@ -9,6 +9,7 @@
     --text-color-white: #ffffff;
   
     /* Font Sizes */
+    --font-xsmall: 10px;
     --font-small: 12px;
     --font-medium: 16px;
     --font-large: 20px;

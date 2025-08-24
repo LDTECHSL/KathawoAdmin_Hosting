@@ -5,21 +5,10 @@
   height: auto;
   display: flex;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.336);
+  background-color: var(--background-color);
   border-radius: 5px;
   -webkit-box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.11);
-  box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.11);
-  padding: 15px;
+  box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.242);
+  padding: 15px 15px 25px 15px;
   border-top: 4px solid var(--primary-color);
-}
-
-.mainCard{
-  height: auto;
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.11);
-  box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.11);
-  padding: 15px;
 }
