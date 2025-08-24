@@ -157,6 +157,7 @@ export default function Navbar({ children }: Readonly<Props>) {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
+            backgroundColor: "#242424"
           },
         }}
       >
@@ -184,15 +185,14 @@ export default function Navbar({ children }: Readonly<Props>) {
                       sx={{
                         minHeight: 48,
                         px: 2.5,
-                        m: "2px 8px",
-                        borderRadius: "8px",
                         backgroundColor: isParentActive
-                          ? "rgba(230, 125, 34, 0.15)"
+                          ? "rgba(110, 109, 109, 0.29)"
                           : "transparent",
-                        color: isParentActive ? "#aa6900ff" : "black",
+                          borderRight: isParentActive ? "4px solid #7d7d7dff" : "none",
+                        color: isParentActive ? "#7d7d7dff" : "white",
                         "&:hover": {
                           backgroundColor: isParentActive
-                            ? "rgba(230, 125, 34, 0.15)"
+                            ? "rgba(110, 109, 109, 0.29)"
                             : "rgba(57, 56, 56, 0.08)",
                         },
                       }}
@@ -202,7 +202,7 @@ export default function Navbar({ children }: Readonly<Props>) {
                           minWidth: 0,
                           justifyContent: "center",
                           mr: open ? 2 : "auto",
-                          color: isParentActive ? "#e67e22" : "gray",
+                          color: isParentActive ? "#7d7d7dff" : "white",
                         }}
                       >
                         {item.icon}
@@ -212,7 +212,7 @@ export default function Navbar({ children }: Readonly<Props>) {
                         primaryTypographyProps={{ fontSize: "13px" }}
                         sx={{
                           opacity: open ? 1 : 0,
-                          color: isParentActive ? "#e67e22" : "gray",
+                          color: isParentActive ? "#7d7d7dff" : "white",
                         }}
                       />
                       {item.children &&
@@ -233,12 +233,13 @@ export default function Navbar({ children }: Readonly<Props>) {
                                 sx={{
                                   m: "2px 8px",
                                   borderRadius: "6px",
+                                  color: isChildActive ? "#7d7d7dff" : "white",
                                   backgroundColor: isChildActive
-                                    ? "rgba(230, 125, 34, 0.15)"
+                                    ? "rgba(110, 109, 109, 0.29)"
                                     : "transparent",
                                   "&:hover": {
                                     backgroundColor: isChildActive
-                                      ? "rgba(230, 125, 34, 0.15)"
+                                      ? "rgba(110, 109, 109, 0.29)"
                                       : "rgba(57, 56, 56, 0.08)",
                                   },
                                 }}
@@ -248,7 +249,7 @@ export default function Navbar({ children }: Readonly<Props>) {
                                   primaryTypographyProps={{ fontSize: "12px" }}
                                   sx={{
                                     opacity: open ? 1 : 0,
-                                    color: isChildActive ? "#e67e22" : "gray",
+                                    color: isChildActive ? "#7d7d7dff" : "white",
                                   }}
                                 />
                               </ListItemButton>
@@ -277,11 +278,11 @@ export default function Navbar({ children }: Readonly<Props>) {
                   mr: open ? 2 : "auto",
                 }}
               >
-                <Logout style={{ fontSize: "18px" }} />
+                <Logout style={{ fontSize: "18px", color: "white" }} />
               </ListItemIcon>
               <ListItemText
                 primary="Logout"
-                primaryTypographyProps={{ fontSize: "13px", color: "gray" }}
+                primaryTypographyProps={{ fontSize: "13px", color: "white" }}
                 sx={{ opacity: open ? 1 : 0 }}
               />
             </ListItemButton>
