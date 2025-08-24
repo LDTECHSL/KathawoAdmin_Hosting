@@ -9,6 +9,7 @@ import Landing from "./Pages/LandingPage";
 import AboutPage from "./Pages/About";
 import ContactPage from "./Pages/Contact";
 import FeedbackPage from "./Pages/Feedback";
+import Toast from "./Components/Toast";
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -16,6 +17,7 @@ const App: React.FC = () => {
 
   return (
     <>
+    <Toast />
       {!isLoginPage ? (
         <Navbar>
           <Routes>
