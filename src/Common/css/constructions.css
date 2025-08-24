@@ -1,0 +1,24 @@
+@import url("../css/global.css");
+
+.constructions-outer{
+    width: 100%;
+    height: auto;
+    padding: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.set-padding{
+    padding: 0 0 25px 0 !important;
+
+}
+
+.constructions-image{
+    width: 55%;
+}
+
+.link-text{
+    color: var(--primary-color);
+    text-decoration: none;
+}

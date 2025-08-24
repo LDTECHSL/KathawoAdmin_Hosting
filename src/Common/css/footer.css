@@ -1,0 +1,28 @@
+*{
+    /*border: 1px solid red;*/
+}
+
+.footer{
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #f5f6fa;
+}
+
+.version-txt{
+    font-size: 10px;
+    color: rgba(128, 128, 128, 0.623);
+    margin-right: 20px;
+}
+
+.company-text{
+    font-size: 10px;
+    color: rgba(128, 128, 128, 0.623);
+    margin-right: 5px;
+}

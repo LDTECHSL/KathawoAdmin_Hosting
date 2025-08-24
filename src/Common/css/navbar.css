@@ -1,0 +1,200 @@
+@import url("../css/global.css");
+
+*{
+    /*border: 1px solid red;*/
+    font-family: 'Public Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.css-1r9jet7 {
+    min-height: 30px !important;
+}
+
+.drawer-logo{
+    width: 60px !important;
+    margin-right: 5px !important;
+}
+
+.drawer-logo-txt{
+    font-size: 23px;
+    font-weight: bold
+}
+
+.drawer-header{
+    width: auto;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+}
+
+.h{
+    height: auto;
+}
+
+.login-header-text{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.login-content-container{
+    width: 100%;
+    height: 75vh;
+}
+
+.login-outer{
+    width: 30%;
+    height: auto;
+}
+
+.login-head-outer{
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.login-inner{
+    width: 49%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.inner1{
+    justify-content: right;
+}
+
+.toolbar{
+    background-color: white;
+}
+
+.toolbar-inner{
+    width: 100%;
+    height: auto;
+    padding: 5px 0;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.logout-icon{
+    width: 25px;
+}
+
+.logout-icon:hover{
+    cursor: pointer;
+}
+
+.icon-user{
+    color: var(--primary-color);
+    font-size: 30px !important;
+}
+
+.username{
+    font-size: 15px;
+    color: black;
+    margin: 0 20px 0 8px;
+}
+
+.dashboard-title-outer{
+    width: 100%;
+    height: auto;
+    padding: 5px 0;
+    padding-left: 20px;
+}
+
+.dashboard-title{
+    font-size: 12px;
+    color: gray;
+}
+
+.space-bar{
+    height: 15px;
+}
+
+.drawer-user{
+    width: 240px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 15px;
+    border-top: 0.5px solid grey;
+}
+
+.title{
+    width: 500px;
+    font-size: 20px;
+    color: black;
+    margin: 0 20px 0 8px;
+    font-weight: bold;
+}
+
+.drawer-user1{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 15px;
+}
+
+.drawer-user{
+    display: none;
+}
+
+.drawer-user {
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .drawer-user[style*="none"] {
+    opacity: 0;
+  }
+
+.drawer-user-icon{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: white;
+}
+
+.drawer-user-icon1{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    padding: 5px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: white;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+@media (max-width: 426px){
+    .username{
+        display: none !important;
+    }
+
+    .drawer-user{
+        display: flex !important;
+    }
+}

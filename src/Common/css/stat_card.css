@@ -1,0 +1,86 @@
+*{
+    font-family: 'Public Sans', sans-serif;
+}
+
+.stat-outer {
+  width: 95%;
+  height: auto;
+  padding: 5px;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 0px 4px -1px rgba(0, 0, 0, 0.11);
+  padding: 15px;
+}
+
+.stat-header{
+    width: auto;
+    height: auto;
+    padding: 5px 0;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.stat-title{
+    color: gray;
+    font-size: 14px;
+}
+
+.stat-content{
+    width: 100%;
+    height: auto;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.stat-total{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.stat-footer{
+    font-size: 12px;
+    color: gray;
+}
+
+.p-card-outer{
+    width: auto;
+    height: 30px;
+    padding: 4px;
+    border: 1px solid #1677ff;
+    border-radius: 5px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6f4ff;
+}
+
+.percentage-text{
+    color: #1677ff;
+    font-size: 13px;
+    margin: 5px;
+}
+
+.up-icon{
+    font-size: 15px;
+    margin: 5px;
+    color: #1677ff;
+}
+
+.down-icon{
+    font-size: 15px;
+    margin: 5px;
+    color: orange;
+}
+
+.down{
+    border: 1px solid orange !important;
+    background-color: #fffbe6 !important;
+}
+
+.down-text{
+    color: orange !important;
+}

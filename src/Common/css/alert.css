@@ -1,0 +1,29 @@
+
+.alert-outer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .alert-logo-inner {
+    width: 15%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .alert-title-inner {
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 10px;
+  }
+  
+  .alertLogo {
+    width: 35px;
+  }

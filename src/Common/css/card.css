@@ -1,0 +1,25 @@
+@import url("../css/global.css");
+
+.card {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.336);
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 0px 11px -2px rgba(0, 0, 0, 0.11);
+  padding: 15px;
+  border-top: 4px solid var(--primary-color);
+}
+
+.mainCard{
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 0px 11px -1px rgba(0, 0, 0, 0.11);
+  padding: 15px;
+}

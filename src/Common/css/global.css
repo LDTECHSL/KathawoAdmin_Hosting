@@ -1,0 +1,25 @@
+:root {
+    /* Colors */
+    --primary-color: #e67e22;
+    --primary-color-dark: #5F616E;
+    --secondary-color: #04fd6c;
+    --accent-color: #e74c3c;
+    --background-color: #f4f4f4;
+    --text-color: #161616;
+    --text-color-white: #ffffff;
+  
+    /* Font Sizes */
+    --font-small: 12px;
+    --font-medium: 16px;
+    --font-large: 20px;
+    --font-xlarge: 24px;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  

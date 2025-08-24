@@ -1,0 +1,16 @@
+{
+    "authLoginPage": {
+        "header": "R.M.M"
+    },
+    "loginPage": {
+        "header": "Login",
+        "usernameLabel": "Username",
+        "passwordLabel": "Password",
+        "noAccountText": "Don't have an account?",
+        "forgetPasswordText": "Forget password?",
+        "loginButton": "Login"
+    },
+    "footer": {
+        "version": "Version : "
+    }
+}
