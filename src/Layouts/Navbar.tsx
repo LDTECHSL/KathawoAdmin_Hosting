@@ -306,7 +306,6 @@ export default function Navbar({ children }: Readonly<Props>) {
         <DrawerHeader />
         {children}
       </Box>
-      <Footer />
     </Box>
   );
 }
