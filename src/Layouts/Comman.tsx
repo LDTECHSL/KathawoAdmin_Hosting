@@ -1,6 +1,5 @@
 import "../Common/css/styles.css";
-import { ReactElement, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { ReactElement } from "react";
 
 interface Props {
   children: ReactElement;
@@ -9,10 +8,6 @@ interface Props {
 }
 
 export default function CommanLayout({ children,name,path }: Readonly<Props>) {
-
-  const token = localStorage.getItem("token")
-    const navigate = useNavigate()
-    const [adOpen, setAdOpen] = useState(false)
 
   return (
     <div className="comman-outer-container">

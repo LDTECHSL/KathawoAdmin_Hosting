@@ -2,8 +2,6 @@ import React from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./Layouts/Navbar"; // Adjust the path as needed
 import Dashboard from "./Pages/Dashboard";
-import Stats from "./Pages/StatPage";
-import Details from "./Pages/DetailsPage";
 import Login from "./Pages/LoginPage"; // Import your login page
 import Landing from "./Pages/LandingPage";
 import AboutPage from "./Pages/About";

@@ -2,7 +2,6 @@ import * as React from "react";
 import { styled, Theme, CSSObject, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import MuiDrawer from "@mui/material/Drawer";
-import { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
 import List from "@mui/material/List";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
@@ -12,28 +11,27 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Collapse from "@mui/material/Collapse";
 import {
+  AccountCircleTwoTone,
+  EmojiEventsTwoTone,
   ExpandLess,
   ExpandMore,
-  Logout,
-  MessageOutlined,
-  PhoneOutlined,
+  NotificationsActiveTwoTone,
+  PeopleTwoTone,
+  PowerSettingsNewTwoTone,
+  RocketLaunchTwoTone,
 } from "@mui/icons-material";
 import { ReactElement } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import "../Common/css/navbar.css";
-import Footer from "../Components/Footer";
 import logo from "../Assets/Images/hdts.png";
 import Dialogbox from "../Components/Dialogbox";
 import {
-  DashboardOutlined,
-  InfoCircleOutlined,
   LeftCircleTwoTone,
   RightCircleTwoTone,
 } from "@ant-design/icons";
 import { IconButton, Typography, useMediaQuery } from "@mui/material";
-import { log } from "console";
 
-const drawerWidth = 240;
+const drawerWidth = 230;
 
 const openedMixin = (theme: Theme): CSSObject => ({
   width: drawerWidth,
@@ -63,10 +61,6 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 1),
   ...theme.mixins.toolbar,
 }));
-
-interface AppBarProps extends MuiAppBarProps {
-  open?: boolean;
-}
 
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -102,7 +96,7 @@ export default function Navbar({ children }: Readonly<Props>) {
   const isMobile = useMediaQuery(theme.breakpoints.down("md")); // mobile detection
 
   const [logoutOpen, setLogoutOpen] = React.useState(false);
-  const [open, setOpen] = React.useState(true);
+  const [open] = React.useState(true);
   const [mobileOpen, setMobileOpen] = React.useState(false); // mobile drawer state
   const [expanded, setExpanded] = React.useState<number | null>(null);
 
@@ -120,28 +114,33 @@ export default function Navbar({ children }: Readonly<Props>) {
   const drawerItems = [
     {
       name: "Dashboard",
-      icon: <DashboardOutlined style={{ fontSize: "18px" }} />,
+      icon: <RocketLaunchTwoTone style={{ fontSize: "18px" }} />,
       path: "/dashboard",
     },
     {
-      name: "Contact",
-      icon: <PhoneOutlined style={{ fontSize: "18px" }} />,
-      path: "/contact",
+      name: "Users",
+      icon: <AccountCircleTwoTone style={{ fontSize: "18px" }} />,
+      path: "/users",
     },
     {
-      name: "About",
-      icon: <InfoCircleOutlined style={{ fontSize: "18px" }} />,
+      name: "Events",
+      icon: <EmojiEventsTwoTone style={{ fontSize: "18px" }} />,
       children: [
-        { name: "Company", path: "/about/company" },
-        { name: "Team", path: "/about/team" },
-        { name: "Careers", path: "/about/careers" },
+        { name: "Company", path: "/events/company" },
+        { name: "Team", path: "/events/team" },
+        { name: "Careers", path: "/events/careers" },
       ],
     },
     {
-      name: "Feedback",
-      icon: <MessageOutlined style={{ fontSize: "18px" }} />,
-      path: "/feedback",
+      name: "Groups",
+      icon: <PeopleTwoTone style={{ fontSize: "18px" }} />,
+      path: "/groups",
     },
+    {
+      name: "Notifications",
+      icon: <NotificationsActiveTwoTone style={{ fontSize: "18px" }} />,
+      path: "/notifications",
+    }
   ];
 
   const renderDrawerContent = (
@@ -267,7 +266,7 @@ export default function Navbar({ children }: Readonly<Props>) {
                 mr: open ? 2 : "auto",
               }}
             >
-              <Logout style={{ fontSize: "18px", color: "white" }} />
+              <PowerSettingsNewTwoTone style={{ fontSize: "18px", color: "white" }} />
             </ListItemIcon>
             <ListItemText
               primary="Logout"
