@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CommanLayout from "src/Layouts/Comman";
 import "../../Common/css/pages.css";
-import { CloudUploadTwoTone, Send } from "@mui/icons-material";
+import { CloudUploadTwoTone, Send, Delete } from "@mui/icons-material";
 import logoImg from "../../Assets/Images/logo.png";
 
 export default function Stickers() {
@@ -21,36 +21,12 @@ export default function Stickers() {
         // TODO: Upload logic
     };
 
-    // 👇 Sample images array (can be replaced with API or uploaded images later)
+    const handleDelete = (idx: number) => {
+        console.log("Delete sticker at index:", idx);
+        // TODO: remove from state when using uploaded images
+    };
+
     const sampleImages = [
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
-        logoImg,
         logoImg,
         logoImg,
         logoImg,
@@ -104,8 +80,14 @@ export default function Stickers() {
                 {/* Stickers Section */}
                 <div className="stickers-outer">
                     {sampleImages.map((src, idx) => (
-                        <div key={idx} className="sticker-inner">
-                            <img src={src} alt={`sticker-${idx}`} style={{ width: "90%" }} />
+                        <div className="sticker-inner" key={idx}>
+                            <img src={src} alt={`sticker-${idx}`} />
+                            <div className="overlay">
+                                <Delete
+                                    sx={{ fontSize: 32, color: "red", cursor: "pointer" }}
+                                    onClick={() => handleDelete(idx)}
+                                />
+                            </div>
                         </div>
                     ))}
                 </div>

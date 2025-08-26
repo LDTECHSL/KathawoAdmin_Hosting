@@ -35,4 +35,33 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.sticker-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+/* Overlay for delete icon */
+.sticker-inner .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* On hover: blur image + show overlay */
+.sticker-inner:hover img {
+  filter: blur(2px);
+}
+
+.sticker-inner:hover .overlay {
+  opacity: 1;
 }
