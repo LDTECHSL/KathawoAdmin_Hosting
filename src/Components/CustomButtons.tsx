@@ -16,7 +16,7 @@ export function PrimaryButton(props: ButtonProps) {
             disabled={props.disabled}
             startIcon={props.icon}
             sx={{
-                backgroundColor: "#0047aa",
+                backgroundColor: "#da6f0cff",
                 "&:disabled": {
                     backgroundColor: "#e0e0e0", // Custom disabled background
                     color: "#9e9e9e", // Custom disabled text color
