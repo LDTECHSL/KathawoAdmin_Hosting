@@ -30,7 +30,7 @@
     overflow: hidden;
     border: 1px solid #eee;
     background-color: rgba(255, 255, 255, 0.986);
-    box-shadow: rgba(0, 0, 0, 0) 0px 4px 12px;
+    box-shadow: inset rgba(0, 0, 0, 0.13) 0px 4px 12px;
     border-radius: 15px;
     display: flex;
     align-items: center;
