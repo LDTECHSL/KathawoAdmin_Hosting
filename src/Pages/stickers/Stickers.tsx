@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CommanLayout from "src/Layouts/Comman";
 import "../../Common/css/pages.css";
 import { CloudUploadTwoTone, Send } from "@mui/icons-material";
-import { PrimaryButton } from "src/Components/CustomButtons";
+import logoImg from "../../Assets/Images/logo.png";
 
 export default function Stickers() {
     const [files, setFiles] = useState<File[]>([]);
@@ -18,12 +18,66 @@ export default function Stickers() {
     };
 
     const handleSave = () => {
+        // TODO: Upload logic
+    };
 
-    }
+    // 👇 Sample images array (can be replaced with API or uploaded images later)
+    const sampleImages = [
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+        logoImg,
+    ];
 
     return (
-        <CommanLayout name="Stickers" path="/stickers" isBtn={true} icon={<Send />} btnName="Upload" onclick={handleSave} variety="primary">
+        <CommanLayout
+            name="Stickers"
+            path="/stickers"
+            isBtn={true}
+            icon={<Send />}
+            btnName="Upload"
+            onclick={handleSave}
+            variety="primary"
+        >
             <>
+                {/* Drag & Drop Zone */}
                 <div
                     className="full-width-outer"
                     onDrop={handleDrop}
@@ -45,6 +99,15 @@ export default function Stickers() {
                             ))}
                         </ul>
                     )}
+                </div>
+
+                {/* Stickers Section */}
+                <div className="stickers-outer">
+                    {sampleImages.map((src, idx) => (
+                        <div key={idx} className="sticker-inner">
+                            <img src={src} alt={`sticker-${idx}`} style={{ width: "90%" }} />
+                        </div>
+                    ))}
                 </div>
             </>
         </CommanLayout>
