@@ -14,15 +14,21 @@ export function PrimaryButton(props: ButtonProps) {
             variant="contained"
             onClick={props.onClick}
             disabled={props.disabled}
-            startIcon={props.icon}
+            endIcon={props.icon}
             sx={{
+                textTransform: "none",
                 backgroundColor: "#da6f0cff",
+                "& .MuiButton-endIcon": {
+                    "& > *:nth-of-type(1)": {
+                        fontSize: 16,
+                    },
+                },
                 "&:disabled": {
-                    backgroundColor: "#e0e0e0", // Custom disabled background
-                    color: "#9e9e9e", // Custom disabled text color
-                    pointerEvents: "none", // Disable pointer events
+                    backgroundColor: "#e0e0e0",
+                    color: "#9e9e9e",
+                    pointerEvents: "none",
                     "&:hover": {
-                        backgroundColor: "#e0e0e0", // Same as disabled background to prevent hover effect
+                        backgroundColor: "#e0e0e0",
                     },
                 },
             }}
@@ -38,9 +44,15 @@ export function SecondaryButton(props: ButtonProps) {
             variant="contained"
             onClick={props.onClick}
             disabled={props.disabled}
-            startIcon={props.icon}
+            endIcon={props.icon}
             sx={{
+                textTransform: "none",
                 backgroundColor: "grey",
+                "& .MuiButton-endIcon": {
+                    "& > *:nth-of-type(1)": {
+                        fontSize: 16,
+                    },
+                },
                 "&:disabled": {
                     backgroundColor: "#e0e0e0",
                     color: "#9e9e9e",
@@ -63,8 +75,14 @@ export function WarningButton(props: ButtonProps) {
             color="error"
             onClick={props.onClick}
             disabled={props.disabled}
-            startIcon={props.icon}
+            endIcon={props.icon}
             sx={{
+                textTransform: "none",
+                "& .MuiButton-endIcon": {
+                    "& > *:nth-of-type(1)": {
+                        fontSize: 16,
+                    },
+                },
                 "&:disabled": {
                     backgroundColor: "#e0e0e0",
                     color: "#9e9e9e",
@@ -86,9 +104,15 @@ export function SuccessButton(props: ButtonProps) {
             variant="contained"
             onClick={props.onClick}
             disabled={props.disabled}
-            startIcon={props.icon}
+            endIcon={props.icon}
             sx={{
+                textTransform: "none",
                 backgroundColor: "#00b457",
+                "& .MuiButton-endIcon": {
+                    "& > *:nth-of-type(1)": {
+                        fontSize: 16,
+                    },
+                },
                 "&:disabled": {
                     backgroundColor: "#e0e0e0",
                     color: "#9e9e9e",

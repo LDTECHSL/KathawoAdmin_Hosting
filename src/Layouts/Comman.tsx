@@ -11,9 +11,10 @@ interface Props {
   btnName?: string;
   onclick?: () => void;
   variety?: string;
+  icon?: React.ReactNode;
 }
 
-export default function CommanLayout({ children, name, path, isBtn, btnName, onclick, variety }: Readonly<Props>) {
+export default function CommanLayout({ children, name, path, isBtn, btnName, onclick, variety, icon }: Readonly<Props>) {
 
   return (
     <div className="comman-outer-container">
@@ -26,16 +27,16 @@ export default function CommanLayout({ children, name, path, isBtn, btnName, onc
       {isBtn && (
         <div className="btn-area">
           {variety === "primary" && (
-            <PrimaryButton name={btnName ?? ""} onClick={onclick ?? (() => { })} disabled={false} />
+            <PrimaryButton icon={icon} name={btnName ?? ""} onClick={onclick ?? (() => { })} disabled={false} />
           )}
           {variety === "secondary" && (
-            <SecondaryButton name={btnName ?? ""} onClick={onclick ?? (() => { })} disabled={false} />
+            <SecondaryButton icon={icon} name={btnName ?? ""} onClick={onclick ?? (() => { })} disabled={false} />
           )}
           {variety === "warning" && (
-            <WarningButton name={btnName ?? ""} onClick={onclick ?? (() => { })} disabled={false} />
+            <WarningButton icon={icon} name={btnName ?? ""} onClick={onclick ?? (() => { })} disabled={false} />
           )}
           {variety === "success" && (
-            <SuccessButton name={btnName ?? ""} onClick={onclick ?? (() => { })} disabled={false} />
+            <SuccessButton icon={icon} name={btnName ?? ""} onClick={onclick ?? (() => { })} disabled={false} />
           )}
         </div>
       )}

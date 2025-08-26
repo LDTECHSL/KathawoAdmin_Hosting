@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CommanLayout from "src/Layouts/Comman";
 import "../../Common/css/pages.css";
-import { CloudUploadTwoTone } from "@mui/icons-material";
+import { CloudUploadTwoTone, Send } from "@mui/icons-material";
 import { PrimaryButton } from "src/Components/CustomButtons";
 
 export default function Stickers() {
@@ -22,7 +22,7 @@ export default function Stickers() {
     }
 
     return (
-        <CommanLayout name="Stickers" path="/stickers" isBtn={true} btnName="Upload" onclick={handleSave} variety="primary">
+        <CommanLayout name="Stickers" path="/stickers" isBtn={true} icon={<Send />} btnName="Upload" onclick={handleSave} variety="primary">
             <>
                 <div
                     className="full-width-outer"
