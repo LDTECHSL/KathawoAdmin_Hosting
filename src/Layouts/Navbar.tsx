@@ -19,6 +19,7 @@ import {
   PeopleTwoTone,
   PowerSettingsNewTwoTone,
   RocketLaunchTwoTone,
+  StickyNote2TwoTone,
 } from "@mui/icons-material";
 import { ReactElement } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -140,6 +141,11 @@ export default function Navbar({ children }: Readonly<Props>) {
       name: "Notifications",
       icon: <NotificationsActiveTwoTone style={{ fontSize: "18px" }} />,
       path: "/notifications",
+    },
+    {
+      name: "Stickers",
+      icon: <StickyNote2TwoTone style={{ fontSize: "18px" }} />,
+      path: "/stickers",
     }
   ];
 
@@ -363,7 +369,6 @@ export default function Navbar({ children }: Readonly<Props>) {
           width: !isMobile ? (open ? `calc(100% - ${drawerWidth}px)` : "100%") : "100%",
         }}
       >
-        <DrawerHeader />
         {children}
       </Box>
     </Box>

@@ -4,6 +4,7 @@ import Navbar from "./Layouts/Navbar";
 import Login from "./Pages/LoginPage"; // Import your login page
 import Landing from "./Pages/LandingPage";
 import Toast from "./Components/Toast";
+import Stickers from "./Pages/stickers/Stickers";
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -16,6 +17,7 @@ const App: React.FC = () => {
         <Navbar>
           <Routes>
             <Route path="/home" element={<Landing />} />
+            <Route path="/stickers" element={<Stickers />} />
             {/* Add more routes as needed */}
           </Routes>
         </Navbar>
